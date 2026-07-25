@@ -14,3 +14,6 @@ add_service(hal_sensors_default, hal_sensorext_service)
 
 allow hal_sensors_default vendor_hal_display_config_hwservice:hwservice_manager find;
 allow hal_sensors_default vendor_qdisplay_service:service_manager find;
+
+# ION
+allow hal_sensors_default ion_device:chr_file { read open ioctl };
