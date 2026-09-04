@@ -90,6 +90,15 @@ genfscon proc /sys/kernel/sched_lib_name          u:object_r:proc_sched_lib_mask
 # Powershare
 genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,battery_charger/tx_mode    u:object_r:vendor_sysfs_wlc:s0
 
+# Torch Control
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8350c@2:qcom,flash_led@ee00/leds/led:torch_0/brightness          u:object_r:sysfs_torch:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8350c@2:qcom,flash_led@ee00/leds/led:torch_0/max_brightness      u:object_r:sysfs_torch:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8350c@2:qcom,flash_led@ee00/leds/led:torch_1/brightness          u:object_r:sysfs_torch:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8350c@2:qcom,flash_led@ee00/leds/led:torch_1/max_brightness      u:object_r:sysfs_torch:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8350c@2:qcom,flash_led@ee00/leds/led:switch_2/brightness         u:object_r:sysfs_torch:s0
+genfscon sysfs /devices/platform/soc/5c1b000.qcom,cci0/5c1b000.qcom,cci0:qcom,camera-flash@0/torch_brightness          u:object_r:sysfs_torch:s0
+genfscon sysfs /devices/platform/soc/5c1b000.qcom,cci0/5c1b000.qcom,cci0:qcom,camera-flash@2/torch_brightness          u:object_r:sysfs_torch:s0
+
 # Touchscreen
 genfscon sysfs /class/touchscreen                                                                                 u:object_r:vendor_sysfs_touchpanel:s0
 genfscon sysfs /devices/platform/soc/4a80000.spi/spi_master/spi0/spi0.0                                           u:object_r:vendor_sysfs_touchpanel:s0
